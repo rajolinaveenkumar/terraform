@@ -1,4 +1,4 @@
-### What is a Data Source in Terraform?
+# What is a Data Source in Terraform?
 1. Data source is used to query the existing information from the provider.
 2. its help us to fetch the existing infromation from aws dynamically.
 
