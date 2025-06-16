@@ -34,6 +34,8 @@ length(["a", "b", "c"]) → 3
 ```
 ***👉 contains()***
 ```
+Syntax: contains(list, value)
+
 contains(["mysql", "backend"], "mysql") → true
 ```
 ***👉 element()***
@@ -42,6 +44,8 @@ element(["a", "b", "c"], 1) → "b"
 ```
 ***👉 lookup()***
 ```
+Syntax: lookup(map, key, default)
+
 lookup({dev = "t2.micro", prod = "t3.medium"}, "dev", "default") → "t2.micro"
 ```
 
