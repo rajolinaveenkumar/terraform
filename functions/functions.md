@@ -40,7 +40,10 @@ contains(["mysql", "backend"], "mysql") → true
 ```
 ***👉 element()***
 ```
+Syntax: element(list, index)
+
 element(["a", "b", "c"], 1) → "b"
+element(["dev", "staging", "prod"], 2) → "prod"
 ```
 ***👉 lookup()***
 ```
