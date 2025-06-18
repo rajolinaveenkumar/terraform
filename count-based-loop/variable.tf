@@ -10,3 +10,11 @@ variable "zone_id" {
 variable "zone_name" {
   default = "naveenrajoli.site"
 }
+
+variable "commontags" {
+  default = {
+    Project     = "expence"
+    environment = "dev"
+    Owner = "Naveen Rajoli"
+  }
+}
