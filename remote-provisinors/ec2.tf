@@ -27,8 +27,8 @@ resource "aws_instance" "my_server" {
   provisioner "remote-exec" {
     inline  = [
       "sudo dnf install ansible -y",
-      "ls -l /home/ec2-user",
-      "ansible-playbook -i inventory.ini /home/ec2-user/ansible_roles_expense_project/${each.key}.yaml"
+      # "ls -l /home/ec2-user",
+      # "ansible-playbook -i inventory.ini /home/ec2-user/ansible_roles_expense_project/${each.key}.yaml"
     ]
   }
   tags = {
