@@ -133,6 +133,47 @@ tags = {
 }
 ```
 
+### Terraform slice() Function
+```
+slice(list, start_index, end_index)
+
+```
+* list → the list to slice
+* start_index → index where slicing begins (inclusive)
+* end_index → index where slicing ends (exclusive)
+
+```
+locals {
+  az_list = ["ap-south-1a", "ap-south-1b", "ap-south-1c"]
+  selected_azs = slice(local.az_list, 0, 2)
+}
+
+output "selected_azs" {
+  value = local.selected_azs
+}
+
+```
+```
+[
+  "ap-south-1a",
+  "ap-south-1b"
+]
+
+```
+
+### Syntax of Validation Function
+```
+variable "region" {
+  type    = string
+  default = "us-east-1"
+
+  validation {
+    condition     = contains(["us-east-1", "us-west-2", "ap-south-1"], var.region)
+    error_message = "Region must be one of: us-east-1, us-west-2, ap-south-1"
+  }
+}
+
+```
 ### Summary Table
 
 | Function      | Purpose                | Example                         |
