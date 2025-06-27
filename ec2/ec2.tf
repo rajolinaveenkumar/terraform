@@ -11,7 +11,7 @@ resource "aws_instance" "my_server" {
 }
 
 resource "aws_security_group" "allow_tls" {
-  name        = "allow_tls"
+  name        = "allow_tls_1"
   description = "Allow TLS inbound traffic and all outbound traffic"
 
   ingress {
